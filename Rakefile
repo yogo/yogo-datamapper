@@ -1,4 +1,12 @@
 require 'rubygems'
+
+begin
+  require 'bundler'
+  Bundler.setup
+rescue LoadError
+  puts "Bundler is not intalled. Install with: gem install bundler"
+end
+
 require 'rake'
 
 begin
@@ -9,11 +17,8 @@ begin
     gem.description = %Q{TODO: longer description of your gem}
     gem.email = "rheimbuch@gmail.com"
     gem.homepage = "http://github.com/rheimbuch/yogo_project"
-    gem.authors = ["Ryan"]
-    gem.add_development_dependency "rspec", ">= 1.2.9"
-    gem.add_development_dependency "yard", ">= 0"
-    gem.add_development_dependency "cucumber", ">= 0"
-    # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
+    gem.authors = ["Ryan Heimbuch"]
+    gem.add_bundler_dependencies
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError
