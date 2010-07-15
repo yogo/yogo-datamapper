@@ -26,4 +26,51 @@ describe "Yogo::Project" do
     end
   end
   
+  describe "creation" do
+    it "should require a name"
+    it "should not require a description"
+  end
+  
+  describe "instance" do
+    before(:each) do
+      @project = Yogo::Project.create(:name => "A Test Project")
+    end
+    
+    after(:each) do
+      @project.destroy
+    end
+    
+    it "should allow name to be changed" do
+      new_name = "Renamed Project"
+      @project.name = new_name
+      @project.should be_valid
+      @project.save.should be_true
+      @project.name.should == new_name
+    end
+    
+    it "should allow description to be changed" do
+      new_description = "This is a simply a test project."
+      @project.description = new_description
+      @project.should be_valid
+      @project.save.should be_true
+      @project.description.should == new_description
+    end
+    
+    it "should have a data_repository" do
+      @project.should respond_to(:data_repository)
+    end
+    
+    describe "data_repository" do
+      it "should be a datamapper respository" do
+        @project.data_repository.should be_a_kind_of(DataMapper::Repository)
+      end
+    end
+    
+    it "should have collections"
+    describe "collections" do
+      it "should create a collection"
+      it "should return a list of collections"
+    end
+  end
+  
 end
