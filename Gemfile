@@ -11,4 +11,6 @@ group :development do
   gem "rspec"
   gem "yard"
   gem "ruby-debug"
+  gem "dm-sqlite-adapter"
+  gem "dm-persevere-adapter", :path => "~/Projects/yogo/dm-persevere-adapter"
 end
