@@ -5,7 +5,7 @@ describe "Yogo::Project" do
     
   end
   
-  describe "Yogo::Project Class" do
+  describe "class" do
     it "should be a datamapper model" do
       Yogo::Project.should be_a_kind_of(DataMapper::Model)
     end
@@ -14,7 +14,7 @@ describe "Yogo::Project" do
       Yogo::Project.should respond_to(:default_data_repository_name)
     end
     
-    describe "default_data_repository" do
+    describe "default_data_repository_name" do
       it "should be a symbol" do
         Yogo::Project.default_data_repository_name.should be_a_kind_of(Symbol)
       end
