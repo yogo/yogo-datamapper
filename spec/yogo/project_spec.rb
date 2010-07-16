@@ -1,9 +1,6 @@
 require File.expand_path(File.join(File.dirname(__FILE__), '..', 'spec_helper'))
 
 describe "Yogo::Project" do
-  before(:all) do
-    
-  end
   
   describe "class" do
     it "should be a datamapper model" do
