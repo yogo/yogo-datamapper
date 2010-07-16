@@ -76,7 +76,7 @@ describe "Yogo::Project::Collection" do
         @data.repository.should == @collection.data_repository
       end
       
-      describe "with definition" do        
+      describe "with definition" do
         describe "dumping" do
           it "should have dump_definition method" do
             @data.should respond_to(:dump_definition)
@@ -97,7 +97,7 @@ describe "Yogo::Project::Collection" do
             dumped_props = dump[:properties]
             dumped_props.size.should == 1
             
-            dumped_prop = dumped_props.first
+            dumped_prop = dumped_props[:test_property]
             dumped_prop[:name].should == prop_name
             dumped_prop[:type].should == prop_type.name
             dumped_prop[:options].should == prop_opts
@@ -108,6 +108,8 @@ describe "Yogo::Project::Collection" do
           it "should have load_definition method" do
             @data.should respond_to(:load_definition)
           end
+          
+          it "should load properties from a definition"
         end
       end
     end
