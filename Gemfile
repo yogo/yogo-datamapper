@@ -1,9 +1,12 @@
+source :rubygems
+
 gem "dm-core", ">=1.0.0"
+gem "extlib"
 gem "dm-aggregates"
 gem "dm-types"
 gem "dm-migrations"
 gem "dm-validations"
-gem "extlib"
+gem 'uuidtools',       '~> 2.1.1'
 
 group :development do
   gem "rake"
