@@ -23,10 +23,6 @@ describe "Yogo::Project" do
     end
   end
   
-  describe "creation" do
-    it "should require a name"
-    it "should not require a description"
-  end
   
   describe "instance" do
     before(:each) do
@@ -63,11 +59,6 @@ describe "Yogo::Project" do
       end
     end
     
-    it "should have collections"
-    describe "collections" do
-      it "should create a collection"
-      it "should return a list of collections"
-    end
   end
   
 end
