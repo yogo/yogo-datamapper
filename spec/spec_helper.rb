@@ -9,6 +9,7 @@ require 'yogo/project'
 
 require 'ruby-debug'
 
+
 Spec::Runner.configure do |config|
   config.before(:suite) do
     DataMapper.finalize
@@ -18,5 +19,7 @@ Spec::Runner.configure do |config|
     
     Yogo::Project.auto_migrate!
     Yogo::Project::Collection.auto_migrate!
+    
+    @project_data = DataMapper.setup(:project_data, "persevere://localhost:8080")
   end
 end

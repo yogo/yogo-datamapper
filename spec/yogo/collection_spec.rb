@@ -80,10 +80,33 @@ describe "Yogo::Project::Collection" do
       end
       
       it "should have :properties" do
-        @data_definition.should have_key(:properties)
-        @data_definition[:properties].should be_a_kind_of(Hash)
+        @data_definition.should have_key('properties')
+        @data_definition['properties'].should be_a_kind_of(Hash)
       end
       
+    end
+    
+    describe "collection data" do
+      it "should be able to work with data in a collection" do
+        new_def = {
+          'properties' => {
+            'name' => {
+              'type' => "String"
+            },
+            'age' => {
+              'type' => "Integer"
+            }
+          }
+        }
+        
+        @collection.data_definition = new_def
+        
+        @collection.data.create(:name => "John", :age => 35)
+        @collection.data.create(:name => "Jane", :age => 35)
+        
+        @collection.data.all.size.should == 2
+        @collection.data.all(:age => 35).size.should == 2
+      end
     end
   end
 end
