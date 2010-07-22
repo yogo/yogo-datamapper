@@ -6,6 +6,7 @@ gem "dm-aggregates"
 gem "dm-types"
 gem "dm-migrations"
 gem "dm-validations"
+gem "dm-serializer"
 gem 'uuidtools',       '~> 2.1.1'
 
 group :development do
