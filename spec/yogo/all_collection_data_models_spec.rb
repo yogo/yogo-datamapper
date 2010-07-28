@@ -1,10 +1,12 @@
-shared_examples_for "Collection Data Model" do
+require File.expand_path(File.join(File.dirname(__FILE__), '..', 'spec_helper'))
+
+shared_examples_for "All Collection Data Models" do
   it "should be a datamapper model" do
     @data_model.should be_a_kind_of(DataMapper::Model)
   end
 
-  it "should use the @collection data_repository" do
-    @data_model.repository.should == @collection.data_repository
+  it "should use the collection data_repository" do
+    @data_model.repository.should == @data_model.collection.collection_repository
   end
 
   describe "with definition" do
