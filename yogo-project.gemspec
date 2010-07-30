@@ -5,12 +5,12 @@
 
 Gem::Specification.new do |s|
   s.name = %q{yogo-project}
-  s.version = "0.1.0"
+  s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Ryan Heimbuch"]
-  s.date = %q{2010-07-21}
-  s.description = %q{TODO: longer description of your gem}
+  s.date = %q{2010-07-30}
+  s.description = %q{User configurable data layer for Yogo}
   s.email = %q{rheimbuch@gmail.com}
   s.extra_rdoc_files = [
     "LICENSE",
@@ -27,42 +27,49 @@ Gem::Specification.new do |s|
      "features/step_definitions/yogo_project_steps.rb",
      "features/support/env.rb",
      "features/yogo_project.feature",
+     "lib/yogo/collection.rb",
+     "lib/yogo/collection/data/definition.rb",
+     "lib/yogo/collection/data/model.rb",
+     "lib/yogo/collection/property.rb",
      "lib/yogo/project.rb",
-     "lib/yogo/project/collection.rb",
-     "lib/yogo/project/collection/data/definition.rb",
-     "lib/yogo/project/collection/data/model.rb",
-     "lib/yogo/project/property_ext.rb",
+     "lib/yogo/property_ext.rb",
      "spec/spec.opts",
      "spec/spec_helper.rb",
-     "spec/yogo/collection_data_model_spec.rb",
-     "spec/yogo/collection_spec.rb",
-     "spec/yogo/project_spec.rb",
+     "spec/yogo/all_collection_data_models_spec.rb",
+     "spec/yogo/all_collection_managers_spec.rb",
+     "spec/yogo/all_collections_spec.rb",
+     "spec/yogo/basic_collection_spec.rb",
+     "spec/yogo/collection_schema_spec.rb",
      "yogo-project.gemspec"
   ]
   s.homepage = %q{http://github.com/rheimbuch/yogo_project}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.3.6}
-  s.summary = %q{TODO: one-line summary of your gem}
+  s.rubygems_version = %q{1.3.7}
+  s.summary = %q{User configurable data layer for Yogo}
   s.test_files = [
     "spec/spec_helper.rb",
-     "spec/yogo/collection_data_model_spec.rb",
-     "spec/yogo/collection_spec.rb",
-     "spec/yogo/project_spec.rb"
+     "spec/yogo/all_collection_data_models_spec.rb",
+     "spec/yogo/all_collection_managers_spec.rb",
+     "spec/yogo/all_collections_spec.rb",
+     "spec/yogo/basic_collection_spec.rb",
+     "spec/yogo/collection_schema_spec.rb"
   ]
 
   if s.respond_to? :specification_version then
     current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
     s.specification_version = 3
 
-    if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<dm-core>, [">= 1.0.0"])
-      s.add_runtime_dependency(%q<extlib>, [">= 0"])
-      s.add_runtime_dependency(%q<dm-aggregates>, [">= 0"])
-      s.add_runtime_dependency(%q<dm-types>, [">= 0"])
-      s.add_runtime_dependency(%q<dm-migrations>, [">= 0"])
-      s.add_runtime_dependency(%q<dm-validations>, [">= 0"])
-      s.add_runtime_dependency(%q<uuidtools>, ["~> 2.1.1"])
+    if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
+      s.add_runtime_dependency(%q<activesupport>, ["~> 3.0.0.beta4"])
+      s.add_runtime_dependency(%q<dm-core>, ["~> 1.0.0"])
+      s.add_runtime_dependency(%q<dm-aggregates>, ["~> 1.0.0"])
+      s.add_runtime_dependency(%q<dm-types>, ["~> 1.0.0"])
+      s.add_runtime_dependency(%q<dm-migrations>, ["~> 1.0.0"])
+      s.add_runtime_dependency(%q<dm-validations>, ["~> 1.0.0"])
+      s.add_runtime_dependency(%q<dm-serializer>, ["~> 1.0.0"])
+      s.add_runtime_dependency(%q<dm-timestamps>, ["~> 1.0.0"])
+      s.add_runtime_dependency(%q<deep_merge>, [">= 0"])
       s.add_development_dependency(%q<rake>, [">= 0"])
       s.add_development_dependency(%q<jeweler>, [">= 0"])
       s.add_development_dependency(%q<rspec>, [">= 0"])
@@ -71,13 +78,15 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<dm-sqlite-adapter>, [">= 0"])
       s.add_development_dependency(%q<dm-persevere-adapter>, [">= 0"])
     else
-      s.add_dependency(%q<dm-core>, [">= 1.0.0"])
-      s.add_dependency(%q<extlib>, [">= 0"])
-      s.add_dependency(%q<dm-aggregates>, [">= 0"])
-      s.add_dependency(%q<dm-types>, [">= 0"])
-      s.add_dependency(%q<dm-migrations>, [">= 0"])
-      s.add_dependency(%q<dm-validations>, [">= 0"])
-      s.add_dependency(%q<uuidtools>, ["~> 2.1.1"])
+      s.add_dependency(%q<activesupport>, ["~> 3.0.0.beta4"])
+      s.add_dependency(%q<dm-core>, ["~> 1.0.0"])
+      s.add_dependency(%q<dm-aggregates>, ["~> 1.0.0"])
+      s.add_dependency(%q<dm-types>, ["~> 1.0.0"])
+      s.add_dependency(%q<dm-migrations>, ["~> 1.0.0"])
+      s.add_dependency(%q<dm-validations>, ["~> 1.0.0"])
+      s.add_dependency(%q<dm-serializer>, ["~> 1.0.0"])
+      s.add_dependency(%q<dm-timestamps>, ["~> 1.0.0"])
+      s.add_dependency(%q<deep_merge>, [">= 0"])
       s.add_dependency(%q<rake>, [">= 0"])
       s.add_dependency(%q<jeweler>, [">= 0"])
       s.add_dependency(%q<rspec>, [">= 0"])
@@ -87,13 +96,15 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<dm-persevere-adapter>, [">= 0"])
     end
   else
-    s.add_dependency(%q<dm-core>, [">= 1.0.0"])
-    s.add_dependency(%q<extlib>, [">= 0"])
-    s.add_dependency(%q<dm-aggregates>, [">= 0"])
-    s.add_dependency(%q<dm-types>, [">= 0"])
-    s.add_dependency(%q<dm-migrations>, [">= 0"])
-    s.add_dependency(%q<dm-validations>, [">= 0"])
-    s.add_dependency(%q<uuidtools>, ["~> 2.1.1"])
+    s.add_dependency(%q<activesupport>, ["~> 3.0.0.beta4"])
+    s.add_dependency(%q<dm-core>, ["~> 1.0.0"])
+    s.add_dependency(%q<dm-aggregates>, ["~> 1.0.0"])
+    s.add_dependency(%q<dm-types>, ["~> 1.0.0"])
+    s.add_dependency(%q<dm-migrations>, ["~> 1.0.0"])
+    s.add_dependency(%q<dm-validations>, ["~> 1.0.0"])
+    s.add_dependency(%q<dm-serializer>, ["~> 1.0.0"])
+    s.add_dependency(%q<dm-timestamps>, ["~> 1.0.0"])
+    s.add_dependency(%q<deep_merge>, [">= 0"])
     s.add_dependency(%q<rake>, [">= 0"])
     s.add_dependency(%q<jeweler>, [">= 0"])
     s.add_dependency(%q<rspec>, [">= 0"])
