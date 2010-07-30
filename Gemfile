@@ -8,8 +8,8 @@ gem 'activesupport',  '~> 3.0.0.beta4', :require => 'active_support'
 
 gem "dm-core",        DM_VERSION
 gem "dm-aggregates",  DM_VERSION    
-gem "dm-types",       DM_VERSION,    :git => "#{DATAMAPPER}/dm-types.git",
-                                    :require => false
+gem "dm-types",       DM_VERSION,     :git => "#{DATAMAPPER}/dm-types.git",
+                                      :require => false
 gem "dm-migrations",  DM_VERSION    
 gem "dm-validations", DM_VERSION    
 gem "dm-serializer",  DM_VERSION    
@@ -23,5 +23,5 @@ group :development do
   gem "yard"
   gem "ruby-debug"
   gem "dm-sqlite-adapter"
-  gem "dm-persevere-adapter", :path => "~/Projects/yogo/dm-persevere-adapter"
+  # gem "dm-persevere-adapter", :path => "~/Projects/yogo/dm-persevere-adapter"
 end
