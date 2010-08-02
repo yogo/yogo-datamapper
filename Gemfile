@@ -15,6 +15,8 @@ gem "dm-validations", DM_VERSION
 gem "dm-serializer",  DM_VERSION    
 gem "dm-timestamps",  DM_VERSION
 gem 'deep_merge'
+gem 'carrierwave'
+gem 'configatron'
 
 group :development do
   gem "rake"
