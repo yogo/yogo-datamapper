@@ -19,8 +19,6 @@ describe "An Asset Collection" do
     asset = @collection.items.create()
     lambda { asset.file = asset_file }.should_not raise_error
     asset.save.should be_true
-    debugger
-    puts asset.file.current_path
   end
   
   it "should retrieve a file"
