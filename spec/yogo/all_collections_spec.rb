@@ -39,7 +39,7 @@ shared_examples_for "All Collections" do
   end
   
   describe "data_model" do
-    before(:each) do      
+    before(:each) do     
       @data_model = @collection.data_model
     end
     
