@@ -12,4 +12,5 @@ describe "A Data Collection" do
   end
   
   it_should_behave_like "All Collections"
+  it_should_behave_like "All Data Collections"
 end
