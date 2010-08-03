@@ -72,6 +72,7 @@ Gem::Specification.new do |s|
      "spec/yogo/all_collections_spec.rb",
      "spec/yogo/all_data_collections_spec.rb",
      "spec/yogo/asset_collection_spec.rb",
+     "spec/yogo/collection_data_definition_spec.rb",
      "spec/yogo/data_collection_spec.rb"
   ]
 
