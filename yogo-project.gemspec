@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Ryan Heimbuch"]
-  s.date = %q{2010-08-02}
+  s.date = %q{2010-08-03}
   s.description = %q{User configurable data layer for Yogo}
   s.email = %q{rheimbuch@gmail.com}
   s.extra_rdoc_files = [
@@ -54,6 +54,7 @@ Gem::Specification.new do |s|
      "spec/yogo/all_collection_data_models_spec.rb",
      "spec/yogo/all_collection_managers_spec.rb",
      "spec/yogo/all_collections_spec.rb",
+     "spec/yogo/all_data_collections_spec.rb",
      "spec/yogo/asset_collection_spec.rb",
      "spec/yogo/data_collection_spec.rb",
      "yogo-project.gemspec"
@@ -68,7 +69,9 @@ Gem::Specification.new do |s|
      "spec/yogo/all_collection_data_models_spec.rb",
      "spec/yogo/all_collection_managers_spec.rb",
      "spec/yogo/all_collections_spec.rb",
+     "spec/yogo/all_data_collections_spec.rb",
      "spec/yogo/asset_collection_spec.rb",
+     "spec/yogo/collection_data_definition_spec.rb",
      "spec/yogo/data_collection_spec.rb"
   ]
 
@@ -77,7 +80,6 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<activesupport>, ["~> 3.0.0.beta4"])
       s.add_runtime_dependency(%q<dm-core>, ["~> 1.0.0"])
       s.add_runtime_dependency(%q<dm-aggregates>, ["~> 1.0.0"])
       s.add_runtime_dependency(%q<dm-types>, ["~> 1.0.0"])
@@ -95,7 +97,6 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<ruby-debug>, [">= 0"])
       s.add_development_dependency(%q<dm-sqlite-adapter>, [">= 0"])
     else
-      s.add_dependency(%q<activesupport>, ["~> 3.0.0.beta4"])
       s.add_dependency(%q<dm-core>, ["~> 1.0.0"])
       s.add_dependency(%q<dm-aggregates>, ["~> 1.0.0"])
       s.add_dependency(%q<dm-types>, ["~> 1.0.0"])
@@ -114,7 +115,6 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<dm-sqlite-adapter>, [">= 0"])
     end
   else
-    s.add_dependency(%q<activesupport>, ["~> 3.0.0.beta4"])
     s.add_dependency(%q<dm-core>, ["~> 1.0.0"])
     s.add_dependency(%q<dm-aggregates>, ["~> 1.0.0"])
     s.add_dependency(%q<dm-types>, ["~> 1.0.0"])
