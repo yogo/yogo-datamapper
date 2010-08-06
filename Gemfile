@@ -15,8 +15,7 @@ gem "dm-types",       DM_VERSION,     :git => "#{DATAMAPPER}/dm-types.git",
                                       :require => false # don't require dm-type/json
 
 gem "dm-migrations",  DM_VERSION    
-gem "dm-validations", DM_VERSION    
-gem "dm-serializer",  DM_VERSION    
+gem "dm-validations", DM_VERSION     
 gem "dm-timestamps",  DM_VERSION
 gem 'deep_merge'
 gem 'carrierwave'
