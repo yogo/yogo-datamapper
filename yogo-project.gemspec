@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{yogo-project}
-  s.version = "0.3.0"
+  s.version = "0.3.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Ryan Heimbuch"]
-  s.date = %q{2010-08-03}
+  s.date = %q{2010-08-06}
   s.description = %q{User configurable data layer for Yogo}
   s.email = %q{rheimbuch@gmail.com}
   s.extra_rdoc_files = [
@@ -72,7 +72,6 @@ Gem::Specification.new do |s|
      "spec/yogo/all_collections_spec.rb",
      "spec/yogo/all_data_collections_spec.rb",
      "spec/yogo/asset_collection_spec.rb",
-     "spec/yogo/collection_data_definition_spec.rb",
      "spec/yogo/data_collection_spec.rb"
   ]
 
@@ -86,7 +85,6 @@ Gem::Specification.new do |s|
       s.add_runtime_dependency(%q<dm-types>, ["~> 1.0.0"])
       s.add_runtime_dependency(%q<dm-migrations>, ["~> 1.0.0"])
       s.add_runtime_dependency(%q<dm-validations>, ["~> 1.0.0"])
-      s.add_runtime_dependency(%q<dm-serializer>, ["~> 1.0.0"])
       s.add_runtime_dependency(%q<dm-timestamps>, ["~> 1.0.0"])
       s.add_runtime_dependency(%q<deep_merge>, [">= 0"])
       s.add_runtime_dependency(%q<carrierwave>, [">= 0"])
@@ -103,7 +101,6 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<dm-types>, ["~> 1.0.0"])
       s.add_dependency(%q<dm-migrations>, ["~> 1.0.0"])
       s.add_dependency(%q<dm-validations>, ["~> 1.0.0"])
-      s.add_dependency(%q<dm-serializer>, ["~> 1.0.0"])
       s.add_dependency(%q<dm-timestamps>, ["~> 1.0.0"])
       s.add_dependency(%q<deep_merge>, [">= 0"])
       s.add_dependency(%q<carrierwave>, [">= 0"])
@@ -121,7 +118,6 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<dm-types>, ["~> 1.0.0"])
     s.add_dependency(%q<dm-migrations>, ["~> 1.0.0"])
     s.add_dependency(%q<dm-validations>, ["~> 1.0.0"])
-    s.add_dependency(%q<dm-serializer>, ["~> 1.0.0"])
     s.add_dependency(%q<dm-timestamps>, ["~> 1.0.0"])
     s.add_dependency(%q<deep_merge>, [">= 0"])
     s.add_dependency(%q<carrierwave>, [">= 0"])
