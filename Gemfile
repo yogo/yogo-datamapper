@@ -20,6 +20,8 @@ gem "dm-timestamps",  DM_VERSION
 gem 'deep_merge'
 gem 'carrierwave'
 gem 'configatron'
+gem 'facets',                          :require => false
+gem 'dm-is-remixable', DM_VERSION
 
 group :development do
   gem "rake"
