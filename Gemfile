@@ -7,7 +7,7 @@ DO_VERSION = '~> 0.10.3'
 # gem 'activesupport',  '~> 3.0.0.beta4', :require => 'active_support'
 
 gem "dm-core",        DM_VERSION
-gem "dm-aggregates",  DM_VERSION    
+gem "dm-aggregates",  DM_VERSION
 
 # 1.0 Release of dm-types has problems with UUID properties, use git master
 gem "dm-types",       DM_VERSION,     :git => "#{DATAMAPPER}/dm-types.git",
@@ -17,12 +17,10 @@ gem "dm-types",       DM_VERSION,     :git => "#{DATAMAPPER}/dm-types.git",
 gem "dm-migrations",  DM_VERSION    
 gem "dm-validations", DM_VERSION     
 gem "dm-timestamps",  DM_VERSION
-gem 'deep_merge'
-gem 'carrierwave'
-gem 'configatron'
-gem 'facets',                          :require => false
 gem 'dm-is-remixable', DM_VERSION
-gem 'dataflow'
+
+gem 'yogo-support'
+gem 'yogo-operation'
 
 group :development do
   gem "rake"
