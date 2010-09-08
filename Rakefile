@@ -12,11 +12,11 @@ require 'rake'
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
-    gem.name = "yogo-project"
-    gem.summary = "User configurable data layer for Yogo"
-    gem.description = "User configurable data layer for Yogo"
+    gem.name = "yogo-datamapper"
+    gem.summary = "Yogo extensions to DataMapper"
+    gem.description = "Yogo extensions to DataMapper"
     gem.email = "rheimbuch@gmail.com"
-    gem.homepage = "http://github.com/rheimbuch/yogo_project"
+    gem.homepage = "http://github.com/yogo/yogo-datamapper"
     gem.authors = ["Ryan Heimbuch"]
     gem.add_bundler_dependencies
   end

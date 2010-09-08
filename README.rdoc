@@ -1,4 +1,4 @@
-= yogo_project
+= yogo-datamapper
 
 Description goes here.
 
@@ -14,4 +14,4 @@ Description goes here.
 
 == Copyright
 
-Copyright (c) 2010 Ryan. See LICENSE for details.
+Copyright (c) 2010 Ryan Heimbuch, Montana State University. See LICENSE for details.
