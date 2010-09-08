@@ -1,4 +1,4 @@
-require 'yogo/op'
+require 'yogo/operation'
 
 module Yogo
   module DataMapper
