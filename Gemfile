@@ -22,6 +22,7 @@ gem 'carrierwave'
 gem 'configatron'
 gem 'facets',                          :require => false
 gem 'dm-is-remixable', DM_VERSION
+gem 'dataflow'
 
 group :development do
   gem "rake"
