@@ -1,34 +1,28 @@
 require 'yogo/operation'
+require 'yogo/datamapper/model/operations'
 
 module Yogo
   module DataMapper
     module Model
-      module Operations
-        module Add
-          Property = Op.on(::DataMapper::Model) do |model, name, type, options|
-            type ||= String
-            options ||= {}
-            model.property(name, type, options)
-            model
-          end
-          
-          
-          Relationship = Op.on(::DataMapper::Model) do |model, method, *args|
-            model.send(method, *args)
-            model
-          end
-          
-          HasRelationship = Relationship.partial(X, :has, X, X, X)
-          
-          HasN = HasRelationship.partial(X, Infinity, X, X)
-          
-          HasOne = HasRelationship.partial(X, 1, X, X)
-          
-          BelongsTo = Relationship.partial(X, :belongs_to, X, X)
-          
-          
-        end # Add
-      end # Operations
+      Operations['add/property'] = Op.on(::DataMapper::Model) do |model, name, type, options|
+        type ||= String
+        options ||= {}
+        model.property(name, type, options)
+        model
+      end
+      
+      Operations['add/relationship'] = Op.on(::DataMapper::Model) do |model, method, *args|
+        model.send(method, *args)
+        model
+      end
+      
+      Operations['add/has_relationship'] = Operations['add/relationship'].partial(X, :has, X, X, X)
+      
+      Operations['add/has_n'] = Operations['add/has_relationship'].partial(X, Infinity, X, X)
+      
+      Operations['add/has_1'] = Operations['add/has_relationship'].partial(X, 1, X, X)
+      
+      Operations['add/belongs_to'] = Operations['add/relationship'].partial(X, :belongs_to, X, X)
     end # Model
   end # DataMapper
 end # Yogo
