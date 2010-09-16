@@ -5,8 +5,11 @@ module Yogo
   module DataMapper
     module Model
       Operations['add/property'] = Op.on(::DataMapper::Model) do |model, name, type, options|
-        type ||= String
+        type ||= "String"
         options ||= {}
+        
+        type = ::DataMapper::Property.find_class(type.to_s)
+        
         model.property(name, type, options)
         model
       end
