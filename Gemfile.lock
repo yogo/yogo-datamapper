@@ -13,7 +13,7 @@ GIT
 GEM
   remote: http://rubygems.org/
   specs:
-    addressable (2.2.0)
+    addressable (2.2.1)
     columnize (0.3.1)
     data_objects (0.10.2)
       addressable (~> 2.1)
@@ -61,10 +61,10 @@ GEM
     stringex (1.1.0)
     uuidtools (2.1.1)
     yard (0.6.1)
-    yogo-operation (0.1.0)
+    yogo-operation (0.1.1)
       dataflow
       yogo-support (~> 0.1.0)
-    yogo-support (0.1.0)
+    yogo-support (0.1.1)
 
 PLATFORMS
   ruby
@@ -84,4 +84,4 @@ DEPENDENCIES
   ruby-debug
   yard
   yogo-operation
-  yogo-support
+  yogo-support (~> 0.1.1)

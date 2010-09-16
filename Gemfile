@@ -19,7 +19,7 @@ gem "dm-validations", DM_VERSION
 gem "dm-timestamps",  DM_VERSION
 gem 'dm-is-remixable', DM_VERSION
 
-gem 'yogo-support'
+gem 'yogo-support',   "~> 0.1.1"
 gem 'yogo-operation'
 
 group :development do
