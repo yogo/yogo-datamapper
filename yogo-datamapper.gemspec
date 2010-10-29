@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Ryan Heimbuch"]
-  s.date = %q{2010-09-09}
+  s.date = %q{2010-10-28}
   s.description = %q{Yogo extensions to DataMapper}
   s.email = %q{rheimbuch@gmail.com}
   s.extra_rdoc_files = [
@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
     ".document",
      ".gitignore",
      "Gemfile",
+     "Gemfile.lock",
      "LICENSE",
      "README.rdoc",
      "Rakefile",
@@ -29,14 +30,15 @@ Gem::Specification.new do |s|
      "features/yogo-datamapper.feature",
      "lib/yogo/datamapper/model/common/properties.rb",
      "lib/yogo/datamapper/model/configuration.rb",
+     "lib/yogo/datamapper/model/operations.rb",
      "lib/yogo/datamapper/model/operations/add.rb",
      "lib/yogo/datamapper/model/operations/clear.rb",
      "lib/yogo/datamapper/model/stored/configuration.rb",
      "lib/yogo/datamapper/repository_manager.rb",
      "lib/yogo/datamapper/repository_manager/model.rb",
      "lib/yogo/datamapper/repository_manager/resource.rb",
-     "spec/spec.opts",
-     "spec/spec_helper.rb"
+     "spec/spec_helper.rb",
+     "yogo-datamapper.gemspec"
   ]
   s.homepage = %q{http://github.com/yogo/yogo-datamapper}
   s.rdoc_options = ["--charset=UTF-8"]
@@ -52,36 +54,36 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(     %q<dm-core>,            ["~> 1.0.2"])
-      s.add_runtime_dependency(     %q<dm-aggregates>,      ["~> 1.0.2"])
-      s.add_runtime_dependency(     %q<dm-types>,           ["~> 1.0.2"])
-      s.add_runtime_dependency(     %q<dm-migrations>,      [">= 0"]    )
-      s.add_runtime_dependency(     %q<dm-validations>,     [">= 0"]    )
-      s.add_runtime_dependency(     %q<dm-timestamps>,      [">= 0"]    )
-      s.add_runtime_dependency(     %q<dm-is-remixable>,    [">= 0"]    )
-      s.add_runtime_dependency(     %q<yogo-support>,       [">= 0"]    )
-      s.add_runtime_dependency(     %q<yogo-operation>,     [">= 0"]    )
+      s.add_runtime_dependency(%q<dm-core>, ["~> 1.0.2"])
+      s.add_runtime_dependency(%q<dm-aggregates>, ["~> 1.0.2"])
+      s.add_runtime_dependency(%q<dm-types>, ["~> 1.0.2"])
+      s.add_runtime_dependency(%q<dm-migrations>, [">= 0"])
+      s.add_runtime_dependency(%q<dm-validations>, [">= 0"])
+      s.add_runtime_dependency(%q<dm-timestamps>, [">= 0"])
+      s.add_runtime_dependency(%q<dm-is-remixable>, [">= 0"])
+      s.add_runtime_dependency(%q<yogo-support>, [">= 0"])
+      s.add_runtime_dependency(%q<yogo-operation>, [">= 0"])
     else
-      s.add_dependency(             %q<dm-core>,            ["~> 1.0.2"])
-      s.add_dependency(             %q<dm-aggregates>,      ["~> 1.0.2"])
-      s.add_dependency(             %q<dm-types>,           ["~> 1.0.2"])
-      s.add_dependency(             %q<dm-migrations>,      [">= 0"]    )
-      s.add_dependency(             %q<dm-validations>,     [">= 0"]    )
-      s.add_dependency(             %q<dm-timestamps>,      [">= 0"]    )
-      s.add_dependency(             %q<dm-is-remixable>,    [">= 0"]    )
-      s.add_dependency(             %q<yogo-support>,       [">= 0"]    )
-      s.add_dependency(             %q<yogo-operation>,     [">= 0"]    )
+      s.add_dependency(%q<dm-core>, ["~> 1.0.2"])
+      s.add_dependency(%q<dm-aggregates>, ["~> 1.0.2"])
+      s.add_dependency(%q<dm-types>, ["~> 1.0.2"])
+      s.add_dependency(%q<dm-migrations>, [">= 0"])
+      s.add_dependency(%q<dm-validations>, [">= 0"])
+      s.add_dependency(%q<dm-timestamps>, [">= 0"])
+      s.add_dependency(%q<dm-is-remixable>, [">= 0"])
+      s.add_dependency(%q<yogo-support>, [">= 0"])
+      s.add_dependency(%q<yogo-operation>, [">= 0"])
     end
   else
-    s.add_dependency(               %q<dm-core>,            ["~> 1.0.2"])
-    s.add_dependency(               %q<dm-aggregates>,      ["~> 1.0.2"])
-    s.add_dependency(               %q<dm-types>,           ["~> 1.0.2"])
-    s.add_dependency(               %q<dm-migrations>,      [">= 0"]    )
-    s.add_dependency(               %q<dm-validations>,     [">= 0"]    )
-    s.add_dependency(               %q<dm-timestamps>,      [">= 0"]    )
-    s.add_dependency(               %q<dm-is-remixable>,    [">= 0"]    )
-    s.add_dependency(               %q<yogo-support>,       [">= 0"]    )
-    s.add_dependency(               %q<yogo-operation>,     [">= 0"]    )
+    s.add_dependency(%q<dm-core>, ["~> 1.0.2"])
+    s.add_dependency(%q<dm-aggregates>, ["~> 1.0.2"])
+    s.add_dependency(%q<dm-types>, ["~> 1.0.2"])
+    s.add_dependency(%q<dm-migrations>, [">= 0"])
+    s.add_dependency(%q<dm-validations>, [">= 0"])
+    s.add_dependency(%q<dm-timestamps>, [">= 0"])
+    s.add_dependency(%q<dm-is-remixable>, [">= 0"])
+    s.add_dependency(%q<yogo-support>, [">= 0"])
+    s.add_dependency(%q<yogo-operation>, [">= 0"])
   end
 end
 
