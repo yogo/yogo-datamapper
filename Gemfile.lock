@@ -2,13 +2,8 @@ PATH
   remote: .
   specs:
     yogo-datamapper (0.4.0)
-      dm-aggregates (~> 1.0.2)
-      dm-core (~> 1.0.2)
+      data_mapper (~> 1.0.2)
       dm-is-remixable
-      dm-migrations
-      dm-timestamps
-      dm-types (~> 1.0.2)
-      dm-validations
       yogo-operation
       yogo-support
 
@@ -25,10 +20,23 @@ GEM
       gherkin (~> 2.2.9)
       json (~> 1.4.6)
       term-ansicolor (~> 1.0.5)
+    data_mapper (1.0.2)
+      dm-aggregates (= 1.0.2)
+      dm-constraints (= 1.0.2)
+      dm-core (= 1.0.2)
+      dm-migrations (= 1.0.2)
+      dm-serializer (= 1.0.2)
+      dm-timestamps (= 1.0.2)
+      dm-transactions (= 1.0.2)
+      dm-types (= 1.0.2)
+      dm-validations (= 1.0.2)
     dataflow (0.3.1)
     diff-lcs (1.1.2)
     dm-aggregates (1.0.2)
       dm-core (~> 1.0.2)
+    dm-constraints (1.0.2)
+      dm-core (~> 1.0.2)
+      dm-migrations (~> 1.0.2)
     dm-core (1.0.2)
       addressable (~> 2.2)
       extlib (~> 0.9.15)
@@ -36,7 +44,13 @@ GEM
       dm-core (~> 1.0.2)
     dm-migrations (1.0.2)
       dm-core (~> 1.0.2)
+    dm-serializer (1.0.2)
+      dm-core (~> 1.0.2)
+      fastercsv (~> 1.5.3)
+      json_pure (~> 1.4)
     dm-timestamps (1.0.2)
+      dm-core (~> 1.0.2)
+    dm-transactions (1.0.2)
       dm-core (~> 1.0.2)
     dm-types (1.0.2)
       dm-core (~> 1.0.2)
@@ -115,13 +129,8 @@ PLATFORMS
 
 DEPENDENCIES
   cucumber
-  dm-aggregates (~> 1.0.2)
-  dm-core (~> 1.0.2)
+  data_mapper (~> 1.0.2)
   dm-is-remixable
-  dm-migrations
-  dm-timestamps
-  dm-types (~> 1.0.2)
-  dm-validations
   jeweler
   rack-debug
   rack-debug19
