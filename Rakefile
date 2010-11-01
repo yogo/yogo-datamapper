@@ -13,15 +13,10 @@ Jeweler::Tasks.new do |gem|
   gem.email       = %q{rheimbuch@gmail.com}
   gem.homepage    = %q{http://github.com/yogo/yogo-datamapper}
   gem.summary     = %q{Yogo extensions to DataMapper}
-  gem.add_dependency(     %q<dm-core>,            "~> 1.0.2")
-  gem.add_dependency(     %q<dm-aggregates>,      "~> 1.0.2")
-  gem.add_dependency(     %q<dm-types>,           "~> 1.0.2")
-  gem.add_dependency(     %q<dm-migrations>,      ">= 0"    )
-  gem.add_dependency(     %q<dm-validations>,     ">= 0"    )
-  gem.add_dependency(     %q<dm-timestamps>,      ">= 0"    )
-  gem.add_dependency(     %q<dm-is-remixable>,    ">= 0"    )
-  gem.add_dependency(     %q<yogo-support>,       ">= 0"    )
-  gem.add_dependency(     %q<yogo-operation>,     ">= 0"    )
+  gem.add_dependency(%q<data_mapper>        , "~> 1.0.2")
+  gem.add_dependency(%q<dm-is-remixable>    )
+  gem.add_dependency(%q<yogo-support>       )
+  gem.add_dependency(%q<yogo-operation>     )
 end
 
 begin

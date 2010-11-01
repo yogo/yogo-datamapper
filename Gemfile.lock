@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    yogo-datamapper (0.3.0)
+    yogo-datamapper (0.4.0)
       dm-aggregates (~> 1.0.2)
       dm-core (~> 1.0.2)
       dm-is-remixable
