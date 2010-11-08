@@ -23,7 +23,7 @@ module Yogo
             partial_ops[i] = op.partial(X, *operation_definitions[i][1..-1])
           end
           partial_ops.compact!
-          partial_ops.reduce{|composed, partial_op| composed * partial_op}
+          partial_ops.reduce(Operations['identity']){|composed, partial_op| composed * partial_op}
         end
       end # Configuration
     end # Model

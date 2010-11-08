@@ -1,6 +1,3 @@
-require 'yogo/operation'
-require 'yogo/datamapper/model/operations'
-
 module Yogo
   module DataMapper
     module Model
@@ -26,6 +23,7 @@ module Yogo
       Operations['add/has_1'] = Operations['add/has_relationship'].partial(X, 1, X, X)
       
       Operations['add/belongs_to'] = Operations['add/relationship'].partial(X, :belongs_to, X, X)
+      
     end # Model
   end # DataMapper
 end # Yogo
