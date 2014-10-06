@@ -16,7 +16,7 @@ Gem::Specification.new do |gem|
 
   gem.add_runtime_dependency("yogo-operation")
   gem.add_runtime_dependency("yogo-support")
-  gem.add_runtime_dependency("data_mapper", "1.1.0")
+  gem.add_runtime_dependency("datamapper", "1.2.0")
   gem.add_runtime_dependency("dm-is-remixable")
 end
 
